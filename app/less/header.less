@@ -1,0 +1,306 @@
+@text-col-header: #fff;
+@bg-color-header: #000;
+
+@hover-col-site: #c2185b;
+@button-col-site: #c2185b;
+@border-color: #2f2f2f;
+
+.flex-row-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-row-around {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex-column-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-column-around {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.order-count-style {
+  width: 22px;
+  height: 22px;
+  color: @text-col-header;
+  font-size: 14px;
+  background-color: @button-col-site;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 22px;
+  position: relative;
+  //top: -7px;
+  //right: -20px;
+}
+
+
+// ----- end basis -----
+
+
+.bg-for-header {
+  background-color: @bg-color-header;
+}
+
+.menu-icon {
+  min-width: 15px;
+  padding: 10px;
+}
+
+
+.header-site-1 {
+  .title-bar-title {
+    margin: 0 auto;
+    .site-logo {
+      img {
+        text-align: center;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  #example-menu {
+    .flex-row-between;
+    align-items: center;
+  }
+  padding: 14px 0 10px 0;
+  .site-navigation-1 {
+    ul {
+      margin: 0;
+      list-style: none;
+      .flex-row-between;
+      li {
+        list-style: none;
+        padding: 4px 0;
+        &:nth-child(even) {
+          border-left: solid @border-color 1px;
+          border-right: solid @border-color 1px;
+        }
+        a {
+          text-decoration: none;
+          color: @text-col-header;
+          padding: 0 20px 0 20px;
+          &:hover {
+            color: @hover-col-site;
+          }
+        } //----- <a> -----
+      } //----- <li> -----
+    } //----- <ul> -----
+  } //----- .site-navigation -----
+  .search-header-1 {
+    flex-grow: 0.6;
+    margin-right: -50px;
+    .wrapper-form-search-1 {
+      .flex-row-between;
+      input[type="search"] {
+        height: 17px;
+        min-width: 115px;
+        //width: 90%;
+        background-color: transparent;
+        border: none;
+        border-bottom: solid @border-color 1px;
+        font-size: 10px;
+        line-height: 20px;
+        color: @text-col-header;
+        margin: 0;
+        padding: 0;
+        &:focus {
+          box-shadow: none;
+        }
+      }//----- input[type="search"] -----
+      button[type="submit"] {
+        height: 17px;
+        width: 20px;
+        background: url("../css/bg-img/search-icon.png") no-repeat center;
+        margin-left: 5px;
+        margin-top: -2px;
+        &:hover {
+          cursor: pointer;
+        }
+        &:focus {
+          outline: none;
+        }
+      } //----- button[type="submit"] -----
+    } //----- .wrapper-form-search -----
+  } //----- .search-header-1 -----
+  .user-1 {
+    .flex-row-between;
+    .user-photo-1 {
+      background: url("../css/bg-img/photo-user.png") no-repeat center;
+      width: 22px;
+      height: 22px;
+      margin-right: 12px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .user-log-in-1 {
+      text-decoration: none;
+      color: @text-col-header;
+      &:hover {
+        color: @hover-col-site;
+      }
+    }
+  } //----- .user -----
+}
+
+
+
+
+hr {
+  margin: 0;
+  max-width: none;
+  border-color: @border-color;
+}
+
+.wrapper-logo {
+  .flex-row-between;
+  margin-top: 30px;
+  .wrapper-phone {
+    .flex-column-between;
+    a {
+      text-decoration: none;
+      color: @text-col-header;
+    }
+  } //----- .wrapper-phone -----
+  .order {
+    .flex-row-between;
+    .user-like {
+      background: url("../css/bg-img/like.png") no-repeat center;
+      width: 33px;
+      height: 30px;
+      margin: 4px 65px 0 0;
+      .like-count-wrap {
+
+      } //----- .like-count-wrap -----
+      .like-count {
+        .order-count-style;
+        top: -7px;
+        right: -23px;
+      } //----- .order-count -----
+    } //----- .user-like -----
+    .user-basket {
+      background: url("../css/bg-img/bag.png") no-repeat center;
+      width: 33px;
+      height: 34px;
+      .order-count-wrap {
+        .order-count {
+          .order-count-style;
+          top: -3px;
+          right: -23px;
+        } //----- .order-count -----
+      } //----- .order-count-wrap -----
+    } //----- .user-basket -----
+  } //----- .order -----
+} //----- .wrapper-logo -----
+
+.wrapper-help-head {
+  .flex-row-between;
+  margin-top: 10px;
+  .feedback {
+    button {
+      margin-top: 8px;
+      width: 165px;
+      height: 34px;
+      color: @text-col-header;
+      background-color: transparent;
+      border: solid 1px @button-col-site;
+      font-size: 12px;
+      line-height: 30px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  } //----- .feedback -----
+  .wrapper-work-to {
+    .flex-column-between;
+    align-items: flex-end;
+    font-size: 16px;
+    line-height: 24px;
+  } //----- .wrapper-work-to -----
+} //----- .wrapper-help-head -----
+
+
+
+
+//----- change default styles dropdown menu foundation -----
+.menu-site {
+  padding: 10px 0;
+  ul {
+    color: @text-col-header;
+    .is-dropdown-submenu-parent {
+      a {
+        text-decoration: none;
+        color: @text-col-header;
+        text-transform: uppercase;
+      }
+    } //----- .is-dropdown-submenu-parent -----
+    .is-dropdown-submenu-parent, .is-active, .opens-right {
+      a {
+        color: @text-col-header;
+        &:hover {
+          color: @hover-col-site;
+        }
+        &:active {
+          color: @hover-col-site;
+        }
+      }
+      .vertical, .menu, .submenu, .is-dropdown-submenu, .js-dropdown-active {
+        background-color: @bg-color-header;
+      }
+    } //----- .is-dropdown-submenu-parent, .is-active -----
+    li {
+      a {
+        text-transform: uppercase;
+        color: @text-col-header;
+        &:hover {
+          color: @hover-col-site;
+        }
+      }
+    }
+  } //----- <ul> -----
+} //----- .menu-site -----
+
+.dropdown.menu .is-active>a {
+  color: @hover-col-site;
+}
+
+.drilldown a, .drilldown .is-drilldown-submenu {
+  background-color: @bg-color-header;
+}
+
+//----- change default icons dropdown menu -----
+.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent>a::after {
+  //background: none;
+  border-color: transparent;
+}
+.dropdown.menu.vertical>li.opens-right>a::after {
+  //background: none;
+  background: url("../css/bg-img/dropdown-icon.png") no-repeat center;
+  height: 12px;
+  width: 12px;
+  padding-left: 10px;
+  position: relative;
+  top: -15px;
+  right: -100%;
+}
+//----- end change default icons dropdown menu -----
+
+
+//----- change default styles dropdown menu for phones -----
+.drilldown .is-drilldown-submenu-parent>a::after {
+  border-color: transparent transparent transparent @hover-col-site;
+}
+.drilldown .js-drilldown-back>a::before {
+  border-color: transparent @hover-col-site transparent transparent;
+}
+//----- end change default styles dropdown menu for phones -----

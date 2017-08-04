@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'dinproLight', sans-serif;
+  src: url('../fonts/dinproLight/dinpro-light.woff2') format('woff2'), url('../fonts/dinproLight/dinpro-light.ttf') format('truetype'), url('../fonts/dinproLight/dinpro-light.woff') format('woff');
+}
+@font-face {
+  font-family: 'dinproMedium', sans-serif;
+  src: url('../fonts/dinproMedium/dinpro-Medium.woff2') format('woff2'), url('../fonts/dinproMedium/dinpro-Medium.ttf') format('truetype'), url('../fonts/dinproMedium/dinpro-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'dinproRegular', sans-serif;
+  src: url('../fonts/dinproRegular/dinpro-regular.woff2') format('woff2'), url('../fonts/dinproRegular/dinpro-regular.ttf') format('truetype'), url('../fonts/dinproRegular/dinpro-regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'fontAwesome', sans-serif;
+  src: url('../fonts/fontAwesome/fontawesome-webfont.woff2') format('woff2'), url('../fonts/fontAwesome/fontawesome-webfont.ttf') format('truetype'), url('../fonts/fontAwesome/fontawesome-webfont.woff') format('woff');
+}

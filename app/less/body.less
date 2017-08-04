@@ -1,0 +1,216 @@
+@text-col-body: #fff;
+@text-col-reviews: #474747;
+
+@hover-col-site: #c2185b;
+@button-col-site: #c2185b;
+@border-color: #2f2f2f;
+
+.flex-row-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-row-around {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex-column-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-column-around {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+// ----- end basis -----
+
+
+
+.wrapper-head-slider {
+  overflow: hidden;
+  position: relative;
+  .slick-prev {
+    z-index: 1001;
+    position: absolute;
+    left: 6.8%;
+    top: 43%;
+    background: url("../css/bg-img/slider-left.png") no-repeat center;
+    height: 44px;
+    width: 44px;
+    &:focus {
+      outline: none;
+    }
+  }
+  .slick-next {
+    z-index: 1001;
+    position: absolute;
+    right: 6.8%;
+    top: 43%;
+    background: url("../css/bg-img/slider-right.png") no-repeat center;
+    height: 44px;
+    width: 44px;
+    &:focus {
+      outline: none;
+    }
+  }
+  .head-slider-item {
+    &:focus {
+      outline: none;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  } //----- .head-slider-item -----
+} //----- .wrapper-head-slider -----
+
+//----- for effect visibility text cover img -----
+.gallery-wrapper {
+  margin-top: 5px;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    li {
+      list-style:none;
+      height: auto;
+      max-width: 100%;
+      margin: 5px;
+      a {
+        display: inline-block;
+        position: relative;
+        color: @text-col-body;
+        .cover-img {
+          background: rgba(129, 129, 129, 0.7);
+          .flex-column-around;
+          justify-content: center;
+          outline: 1px solid @text-col-body; /* Пунктирная рамка */
+          outline-offset: -18px; /* Выводим рамку внутри элемента */
+          transition: all 1s;
+           h3 {
+             text-transform: uppercase;
+             text-align: center;
+             font-size: 20px;
+             line-height: 30px;
+           } //----- <h3> -----
+          p {
+            text-align: center;
+            font-size: 14px;
+            line-height: 18px;
+            padding: 0 16%;
+          } //----- <p> -----
+          display: none;  //----- not change position elem. !!! -----
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        } //----- .cover-img -----
+        &:hover .cover-img{
+          display: flex;
+        }
+      } //----- <a> -----
+    } //----- <li> -----
+  } //----- <ul> -----
+} //----- .gallery-wrapper -----
+
+.reviews {
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  font-size: 24px;
+  line-height: 22px;
+  margin-top: 9.1vh;
+} //----- .reviews -----
+
+.horizontal-line {
+  width: 100%;
+  height: 2px;
+  background-color: #3d3d3d;
+  border-radius: 50%;
+  margin-top: 20px;
+} //----- .horizontal-line -----
+
+.wrapper-review-slider {
+  position: relative;
+  .slick-prev {
+    z-index: 1001;
+    position: absolute;
+    left: 30px;
+    top: 43%;
+    background: url("../css/bg-img/slider-rewievs-left.png") no-repeat center;
+    width: 11px;
+    height: 19px;
+    padding: 5% 0;
+    &:focus {
+      outline: none;
+    }
+  }
+  .slick-next {
+    z-index: 1001;
+    position: absolute;
+    right: 30px;
+    top: 43%;
+    background: url("../css/bg-img/slider-rewievs-right.png") no-repeat center;
+    width: 11px;
+    height: 19px;
+    padding: 5% 0;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.wrapper-review-slider-item {
+  color: @text-col-reviews;
+  width: 390px;
+  margin: 20.45vh 30px 22.73vh 30px;
+  &:focus {
+    outline: none;
+  }
+  .review-slider-item {
+    .flex-column-between;
+    align-items: center;
+    box-shadow: 0 0 60px rgba(114,114,114,0.24);
+    //border: solid 1px red;
+    .review-photo {
+      margin: 75px 0 15px 0;
+    }
+    .review-text {
+      .flex-column-between;
+      align-items: center;
+      line-height: 18px;
+      h4 {
+        font-size: 18px;
+        color: @button-col-site;
+      }
+      span {
+        color: #919191;
+        font-size: 12px;
+      }
+      h3 {
+        color: #000000;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        margin-top: 20px;
+      }
+      p {
+        font-size: 14px;
+        color: @text-col-reviews;
+        text-align: center;
+        margin: 0 45px 75px 45px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    } //----- .review-text -----
+  } //----- .review-slider-item -----
+} //----- .wrapper-review-slider-item -----
