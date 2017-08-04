@@ -11,7 +11,8 @@
  foundation "bower install foundation-sites"
  jquery "bower install jquery"
  slick "bower install --save slick-carousel"
-3. Скопіювати з репозиторія та виконати команду в консолі "gulp"
+3. Скопіювати з репозиторія та виконати команду в консолі "npm init" i "gulp"
+
 
 Уточнення:
 
